@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace fastRitchies
 {
-    public partial class Form1 : Form
+    public partial class LoginPage : Form
     {
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
