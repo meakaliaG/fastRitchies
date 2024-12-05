@@ -17,6 +17,10 @@ namespace fastRitchies
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
+
+            //class testing
+            //FoodCategory burger = new FoodCategory("Burger");
+            //FoodItem cheeseSupreme = new FoodItem("Cheeseburger Supreme");
         }
     }
 }
