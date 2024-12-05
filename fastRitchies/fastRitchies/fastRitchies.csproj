@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodCategory.cs" />
+    <Compile Include="FoodItem.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
