@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace fastRitchies
 {
@@ -14,13 +16,16 @@ namespace fastRitchies
         [STAThread]
         static void Main()
         {
+            //class testing - liv
+            //Icon burgerIcon = new Icon("Assets/burger - solid.svg");
+            //FoodCategory burger = new FoodCategory("Burger", burgerIcon);
+            //FoodItem cheeseSupreme = new FoodItem("Cheeseburger Supreme", "burger", 15.6, "A cheesy, meaty meal.", burgerIcon);
+            //Console.WriteLine("Burger: ", burger);
+            //Console.WriteLine(cheeseSupreme);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
-
-            //class testing
-            //FoodCategory burger = new FoodCategory("Burger");
-            //FoodItem cheeseSupreme = new FoodItem("Cheeseburger Supreme");
         }
 
         public static List<string> GetItems(string category)
