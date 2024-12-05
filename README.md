@@ -6,6 +6,7 @@ Roles:
 Colin: 
 *documentation, comments
 *review logic
+* figured out menu items and prices
 
 Mea:
 *File I/O
@@ -82,3 +83,65 @@ Requirements/Rubric:
 
 *Post project retrospective video (20 points)
 	*what we would different 
+
+*Might not get to customization 
+Menu:
+	Main:
+		- Burger $5
+			- Cheese or No cheese
+			- Mayo, lettuce, pickle, tomato, onions, grilled onions, grilled mushrooms, ketchup, mustard, relish, jalapeno peppers, green peppers, BBQ sauce, Hot sauce
+			- extra patty or no
+		- Chicken tender $5
+			- small,medium,large 
+			- honey mustard, ketchup, mustard. mayo and BBQ
+		-Sub 
+			- Half sub $2.50 and whole sub is $5
+			- Bread: white, wheat, Italian herb and cheese, or malted rye 
+			- Protein: ham, turkey, chicken and salami
+			- Cheese:Provolone, Pepperjack, Shredded Monterey Cheddar, Feta, Parmesan, Cheddar, Mozzarella and Swiss 
+			- Veggies: avocado, Capsicum, Carrots, Cucumbers, Lettuce, Onions, Spinach,Jalapeno,Olives and Pickles
+			-sauces/dressings:Habanero Hot Sauce, Blue Cheese Dressing, Smoky BBQ, Chipotle Southwest,Mayonnaise, Garlic Aioli, Sweet Onion, Honey Mustard,Ranch Dressing,Tomato Sauce,Spicy Mayo
+			- extra or no
+			- toasted or not
+		- Chicken nugget $5
+			- small,medium,large 
+			- honey mustard, ketchup, mustard. mayo and BBQ
+		 
+
+	Sides:
+		- Fries $1
+			- extra salt or none
+			- small, medium large
+			- sweet potato, curly or crinkle cut
+		- Onion rings $1
+			- small, medium large
+		- Mac and cheese $2
+			- small, medium large
+		-  Applesauce $2
+		 - 	small, medium large
+		 - 	strawberry, cinnamon
+	Drinks:
+        - Milkshakes $2
+			- small, medium large
+			- vanilla,chocolate,strawberry, banana, peanut butter, salted caramel, cookies and cream, bacon, reese's cup, oreo creme, 
+			- double stuff 
+			- whipped cream or no
+		- Bottled water $1
+		-  Lemonade $1
+			- small,medium,large
+		- Coco cola $1
+		 - Small, medium, large
+
+	Desserts:
+	   	- cookies $3
+			- chocolae chip
+			- m and m
+		- brownie $3
+		- pie $2
+			- cherry, blurberry, apple and chocolate
+		- ice cream $4
+		 - vanilla,chocolate,strawberry, banana, peanut butter, salted caramel, cookies and cream, bacon, reese's cup
+		 - small, medium, large
+
+
+

@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace fastRitchies
 {
     public partial class LoginPage : Form
+
     {
+        string username = "";
+        string filepath = "";
         public LoginPage()
         {
             InitializeComponent();
@@ -23,6 +26,22 @@ namespace fastRitchies
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameInput_TextChanged(object sender, EventArgs e)
+        {
+            string username = Console.ReadLine();
+            string filepath = $"{username}.txt";
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newAccountButton_Click(object sender, EventArgs e)
         {
 
         }
