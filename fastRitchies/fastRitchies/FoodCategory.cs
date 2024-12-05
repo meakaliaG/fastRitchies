@@ -2,8 +2,7 @@
 
 public class FoodCategory
 {
-	//name of food category
-	public string categoryName;
+	public string categoryName; //name of category
 
 	//constructor
 	public FoodCategory(name)
