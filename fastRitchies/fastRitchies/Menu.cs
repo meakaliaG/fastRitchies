@@ -13,9 +13,11 @@ namespace fastRitchies
 {
     public partial class Menu : Form
     {
-        public Menu()
+        string username = "";
+        public Menu(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void Menu_Load(object sender, EventArgs e)

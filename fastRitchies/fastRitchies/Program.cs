@@ -37,10 +37,10 @@ namespace fastRitchies
 
 
             // next
-            //Application.Run(new Menu());
+            //Application.Run(new Menu(username));
 
             // finally
-            //Checkout checkout = new Checkout();
+            //Checkout checkout = new Checkout(username);
         }
 
         public static List<string> GetItems(string category)
