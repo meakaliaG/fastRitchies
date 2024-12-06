@@ -15,6 +15,7 @@ namespace fastRitchies
 
     {
 
+
         public LoginPage()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace fastRitchies
         {
 
         }
+
+        // load user's past orders
         private void LoadOrders(string filePath)
         {
             if (!File.Exists(filePath))
@@ -54,6 +57,7 @@ namespace fastRitchies
             }
         }
 
+        // create list of past orders
         private List<FoodItem> ParseOrders(string filePath)
         {
             var orders = new List<FoodItem>();
@@ -79,14 +83,11 @@ namespace fastRitchies
         }
 
 
+        // handle for Enter keydown as well
+        private void Enter(object sender, KeyEventArgs e) => loginButton_Click(sender, e);
 
-        private void Enter(object sender, KeyEventArgs e)
-        {
-           
-
-        }
-
-        private void loginButton_Click(object sender, EventArgs e)
+        // take user input from text box as username to validate user
+        public void loginButton_Click(object sender, EventArgs e)
         {
             string username = usernameInput.Text;
             string filePath = $"{username}.txt";
@@ -110,10 +111,8 @@ namespace fastRitchies
             }
         }
 
-
-
-
-        private void newAccountButton_Click(object sender, EventArgs e)
+        // create new file for user if no file can be found with their username
+        public void newAccountButton_Click(object sender, EventArgs e)
         {
             string username = usernameInput.Text;
             string filePath = $"{username}.txt";
@@ -140,6 +139,6 @@ namespace fastRitchies
 
             }
         }
-       
+
     }
 }

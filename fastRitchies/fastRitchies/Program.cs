@@ -27,7 +27,20 @@ namespace fastRitchies
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+
+            LoginPage login = new LoginPage();
+
+            Application.Run(login);
+            // initiate username and filepath
+            string username = login.usernameInput.Text;
+            string filePath = $"{username}.txt";
+
+
+            // next
+            //Application.Run(new Menu());
+
+            // finally
+            //Checkout checkout = new Checkout();
         }
 
         public static List<string> GetItems(string category)

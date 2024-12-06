@@ -21,6 +21,7 @@ namespace fastRitchies
         private void Menu_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,6 +43,12 @@ namespace fastRitchies
                 mains[i].Location = new Point(mainsLoc.X, mainsLoc.Y + (i * 2));
                 tableLayoutPanel1.Controls.Add(mains[i], 0, i+1);
             }
+        }
+
+        private void pastOrdersButton_Click(object sender, EventArgs e)
+        {
+            // TO-DO: add pop-up of past-orders
+            //        make clickable to re-order if time
         }
     }
 }
