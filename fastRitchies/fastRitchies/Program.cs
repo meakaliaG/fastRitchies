@@ -22,6 +22,8 @@ namespace fastRitchies
             //FoodItem cheeseSupreme = new FoodItem("Cheeseburger Supreme", "burger", 15.6, "A cheesy, meaty meal.", burgerIcon);
             //Console.WriteLine("Burger: ", burger);
             //Console.WriteLine(cheeseSupreme);
+          
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
