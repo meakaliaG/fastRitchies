@@ -14,6 +14,7 @@ namespace fastRitchies
     public partial class Menu : Form
     {
         string username = "";
+        List<FoodItem> cart = new List<FoodItem>();
         public Menu(string username)
         {
             InitializeComponent();
@@ -41,13 +42,15 @@ namespace fastRitchies
                 List<Button> sides = new List<Button>();
                 List<FoodItem> menu = Program.GetItems("sides");
                 Point sidesLoc = new Point(0, 0);
-                for (int i = 0; i < menu.Capacity; i++)
+                for (int i = 0; i < menu.Count; i++)
                 {
                     sides.Add(new Button());
                     sides[i].Name = $"btn-sides-{i}";
                     sides[i].Text = menu[i].foodItemName;
                     sides[i].Size = new Size(112, 35);
-                    sides[i].Location = new Point(sidesLoc.X, sidesLoc.Y + (i * 2));
+                sides[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[10].ToString())]); };
+
+                sides[i].Location = new Point(sidesLoc.X, sidesLoc.Y + (i * 2));
                     // add icon
 
                     // Adds button to screen
@@ -70,13 +73,15 @@ namespace fastRitchies
                 List<Button> mains = new List<Button>();
                 List<FoodItem> menu = Program.GetItems("mains");
                 Point mainsLoc = new Point(0, 0);
-                for (int i = 0; i < menu.Capacity; i++)
+                for (int i = 0; i < menu.Count; i++)
                 {
                     mains.Add(new Button());
                     mains[i].Name = $"btn-mains-{i}";
                     mains[i].Text = menu[i].foodItemName;
                     mains[i].Size = new Size(112, 35);
-                    mains[i].Location = new Point(mainsLoc.X, mainsLoc.Y + (i * 2));
+                mains[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[10].ToString())]); };
+
+                mains[i].Location = new Point(mainsLoc.X, mainsLoc.Y + (i * 2));
                     // add icon
 
                     // Adds button to screen
@@ -107,12 +112,13 @@ namespace fastRitchies
             List<Button> drinks = new List<Button>();
             List<FoodItem> menu = Program.GetItems("drinks");
             Point drinksLoc = new Point(0, 0);
-            for (int i = 0; i < menu.Capacity; i++)
+            for (int i = 0; i < menu.Count; i++)
             {
                 drinks.Add(new Button());
                 drinks[i].Name = $"btn-drinks-{i}";
                 drinks[i].Text = menu[i].foodItemName;
                 drinks[i].Size = new Size(112, 35);
+                drinks[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[11].ToString())]); };
                 drinks[i].Location = new Point(drinksLoc.X, drinksLoc.Y + (i * 2));
                 // add icon
 
@@ -137,18 +143,30 @@ namespace fastRitchies
             List<Button> desserts = new List<Button>();
             List<FoodItem> menu = Program.GetItems("desserts");
             Point dessertsLoc = new Point(0, 0);
-            for (int i = 0; i < menu.Capacity; i++)
+            for (int i = 0; i < menu.Count; i++)
             {
                 desserts.Add(new Button());
-                desserts[i].Name = $"btn-drinks-{i}";
+                desserts[i].Name = $"btn-desserts-{i}";
                 desserts[i].Text = menu[i].foodItemName;
                 desserts[i].Size = new Size(112, 35);
+                desserts[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[13].ToString())]); };
                 desserts[i].Location = new Point(dessertsLoc.X, dessertsLoc.Y + (i * 2));
                 // add icon
 
                 // Adds button to screen
                 tableLayoutPanel1.Controls.Add(desserts[i], 3, i + 1);
             }
+        }
+
+        private void AddToCart(object sender, EventArgs e, FoodItem foodItem)
+        {
+            cart.Add(foodItem);
+        }
+
+        private void GoToCart(object sender, EventArgs e)
+        {
+            Checkout checkout = new Checkout(username, cart);
+            checkout.Show();
         }
     }
 }

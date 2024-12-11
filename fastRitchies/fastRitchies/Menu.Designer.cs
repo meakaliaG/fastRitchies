@@ -34,6 +34,7 @@
             this.DrinkButton = new System.Windows.Forms.Button();
             this.DessertButton = new System.Windows.Forms.Button();
             this.pastOrdersButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,11 +117,22 @@
             this.pastOrdersButton.Visible = false;
             this.pastOrdersButton.Click += new System.EventHandler(this.pastOrdersButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1060, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 114);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Cart";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.GoToCart);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pastOrdersButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -140,6 +152,7 @@
         private System.Windows.Forms.Button DrinkButton;
         private System.Windows.Forms.Button DessertButton;
         private System.Windows.Forms.Button pastOrdersButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -15,11 +15,13 @@ namespace fastRitchies
     {
 
         string username = "";
+        List<FoodItem> cart;
 
-        public Checkout(string username)
+        public Checkout(string username, List<FoodItem> cart)
         {
             InitializeComponent();
             this.username = username;
+            this.cart = cart;
         }
 
         private void placeOrderButton_Click(object sender, EventArgs e)
@@ -37,6 +39,19 @@ namespace fastRitchies
             //string filePath = $"{username}.txt";
             //File.WriteAllText(filepath, orderWindow.ToString());
 
+        }
+
+        private void Checkout_Load(object sender, EventArgs e)
+        {
+            double totalPrice = 0.00;
+            foreach(FoodItem item in cart)
+            {
+                cartItems.Items.Add(item.foodItemName);
+                cartPrices.Items.Add(item.foodPrice.ToString("C2"));
+                totalPrice += item.foodPrice;
+            }
+
+            totalPriceLabel.Text = totalPrice.ToString("C2");
         }
     }
 }
