@@ -15,7 +15,7 @@ namespace fastRitchies
 
     {
 
-
+        private string user;
         public LoginPage()
         {
             InitializeComponent();
@@ -101,6 +101,7 @@ namespace fastRitchies
 
             if (File.Exists(filePath))
             {
+                user = username;
                 //load user past orders
                 LoadOrders(filePath);
             }
@@ -124,7 +125,7 @@ namespace fastRitchies
                 return;
             }
 
-
+            user = username;
             if (File.Exists(filePath))
             {
                 loginLabel.Text = $"{username}'s account already exists. Please click the login button to the side.";
@@ -140,5 +141,10 @@ namespace fastRitchies
             }
         }
 
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu(user);
+            menu.Show();
+        }
     }
 }

@@ -45,6 +45,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -58,8 +59,9 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.menuButton);
             this.splitContainer1.Panel2.Controls.Add(this.pastOrdersWindow);
-            this.splitContainer1.Size = new System.Drawing.Size(751, 345);
-            this.splitContainer1.SplitterDistance = 248;
+            this.splitContainer1.Size = new System.Drawing.Size(1126, 531);
+            this.splitContainer1.SplitterDistance = 371;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
             // loginLabel
@@ -67,17 +69,19 @@
             this.loginLabel.AutoEllipsis = true;
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(34, 115);
+            this.loginLabel.Location = new System.Drawing.Point(51, 177);
+            this.loginLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(196, 15);
+            this.loginLabel.Size = new System.Drawing.Size(296, 22);
             this.loginLabel.TabIndex = 3;
             this.loginLabel.Text = "Login below with your username.";
             // 
             // newAccountButton
             // 
-            this.newAccountButton.Location = new System.Drawing.Point(72, 182);
+            this.newAccountButton.Location = new System.Drawing.Point(108, 280);
+            this.newAccountButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.newAccountButton.Name = "newAccountButton";
-            this.newAccountButton.Size = new System.Drawing.Size(100, 91);
+            this.newAccountButton.Size = new System.Drawing.Size(150, 140);
             this.newAccountButton.TabIndex = 2;
             this.newAccountButton.Text = "Click here to create account.";
             this.newAccountButton.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(176, 156);
+            this.loginButton.Location = new System.Drawing.Point(264, 240);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(54, 20);
+            this.loginButton.Size = new System.Drawing.Size(81, 31);
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -95,35 +100,40 @@
             // 
             // usernameInput
             // 
-            this.usernameInput.Location = new System.Drawing.Point(70, 156);
+            this.usernameInput.Location = new System.Drawing.Point(105, 240);
+            this.usernameInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(100, 20);
+            this.usernameInput.Size = new System.Drawing.Size(148, 26);
             this.usernameInput.TabIndex = 0;
             // 
             // menuButton
             // 
-            this.menuButton.Location = new System.Drawing.Point(336, 279);
+            this.menuButton.Location = new System.Drawing.Point(504, 429);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(151, 54);
+            this.menuButton.Size = new System.Drawing.Size(226, 83);
             this.menuButton.TabIndex = 2;
             this.menuButton.Text = "menu";
             this.menuButton.UseVisualStyleBackColor = true;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // pastOrdersWindow
             // 
             this.pastOrdersWindow.HideSelection = false;
-            this.pastOrdersWindow.Location = new System.Drawing.Point(3, 3);
+            this.pastOrdersWindow.Location = new System.Drawing.Point(4, 5);
+            this.pastOrdersWindow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pastOrdersWindow.Name = "pastOrdersWindow";
-            this.pastOrdersWindow.Size = new System.Drawing.Size(493, 270);
+            this.pastOrdersWindow.Size = new System.Drawing.Size(738, 413);
             this.pastOrdersWindow.TabIndex = 1;
             this.pastOrdersWindow.UseCompatibleStateImageBehavior = false;
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 345);
+            this.ClientSize = new System.Drawing.Size(1126, 531);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginPage";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form2_Load);
