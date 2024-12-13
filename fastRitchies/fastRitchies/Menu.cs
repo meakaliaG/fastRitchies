@@ -97,6 +97,8 @@ namespace fastRitchies
         {
             // TO-DO: add pop-up of past-orders
             //        make clickable to re-order if time
+
+            //why is this not showing up on the menu screen now
         }
 
         private void ShowDrinks(object sender, EventArgs e)
