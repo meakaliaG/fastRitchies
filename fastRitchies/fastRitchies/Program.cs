@@ -61,7 +61,7 @@ namespace fastRitchies
                     items.Add(new FoodItem("CSH Cookies", category, 3.00, "1 double chocolate chip cookie.", SystemIcons.Information));
                     items.Add(new FoodItem("Brick City Brownies", category, 3.00, "1 chocolate chunk brownie.", SystemIcons.Information));
                     items.Add(new FoodItem("Alumni Apple Pie", category, 2.00, "Small curly fries.", SystemIcons.Information));
-                    items.Add(new FoodItem("Tiger Tracks Ice Crea ", category, 4.00, "RIT exclusive Perry's Ice Cream flavor: Tiger Tracks!", SystemIcons.Information));
+                    items.Add(new FoodItem("Tiger Tracks Ice Cream", category, 4.00, "RIT exclusive Perry's Ice Cream flavor: Tiger Tracks!", SystemIcons.Information));
                     break;
                 default:
                     break;

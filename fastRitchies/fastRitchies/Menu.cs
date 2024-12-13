@@ -132,7 +132,7 @@ namespace fastRitchies
                 }
             }
 
-            // Shows 
+            //DRINKS//////////////////////////////////////////////////////
             // Dynamically add buttons for each menu item 
             List<Button> drinks = new List<Button>();
             List<FoodItem> menu = Program.GetItems("drinks");
@@ -142,7 +142,15 @@ namespace fastRitchies
                 drinks.Add(new Button());
                 drinks[i].Name = $"btn-drinks-{i}";
                 drinks[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                drinks[i].Size = new Size(217, 50);
+                drinks[i].Size = new Size(217, 100);
+
+                imagePath = $"Assets/{menu[i].foodItemName}.png";
+                drinks[i].Image = Image.FromFile(imagePath);
+                //image
+                drinks[i].TextImageRelation = TextImageRelation.TextBeforeImage;
+                drinks[i].ImageAlign = ContentAlignment.MiddleRight;
+                drinks[i].TextAlign = ContentAlignment.MiddleLeft;
+
                 drinks[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[11].ToString())]); };
                 drinks[i].Location = new Point(drinksLoc.X, drinksLoc.Y + (i * 2));
                 // add icon
@@ -173,7 +181,15 @@ namespace fastRitchies
                 desserts.Add(new Button());
                 desserts[i].Name = $"btn-desserts-{i}";
                 desserts[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                desserts[i].Size = new Size(217, 50);
+                desserts[i].Size = new Size(217, 100);
+
+                imagePath = $"Assets/{menu[i].foodItemName}.png";
+                desserts[i].Image = Image.FromFile(imagePath);
+                //image
+                desserts[i].TextImageRelation = TextImageRelation.TextBeforeImage;
+                desserts[i].ImageAlign = ContentAlignment.MiddleRight;
+                desserts[i].TextAlign = ContentAlignment.MiddleLeft;
+
                 desserts[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[13].ToString())]); };
                 desserts[i].Location = new Point(dessertsLoc.X, dessertsLoc.Y + (i * 2));
                 // add icon
