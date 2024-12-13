@@ -59,7 +59,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(897, 488);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(897, 708);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // MainsButton
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 603);
+            this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pastOrdersButton);
             this.Controls.Add(this.tableLayoutPanel1);

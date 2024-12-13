@@ -43,7 +43,7 @@ namespace fastRitchies
             }
 
             //SIDES//////////////////////////////////////////////////////////
-            // Shows 
+
             // Dynamically add buttons for each menu item 
             List<Button> sides = new List<Button>();
             List<FoodItem> menu = Program.GetItems("sides");
@@ -53,7 +53,7 @@ namespace fastRitchies
                 sides.Add(new Button());
                 sides[i].Name = $"btn-sides-{i}";
                 sides[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                sides[i].Size = new Size(217, 90);
+                sides[i].Size = new Size(217, 100);
 
             imagePath = $"Assets/{menu[i].foodItemName}.png";
                 sides[i].Image = Image.FromFile(imagePath);
@@ -69,6 +69,7 @@ namespace fastRitchies
                 // Adds button to screen
                 tableLayoutPanel1.Controls.Add(sides[i], 1, i + 1);
             }
+
         }
 
         private void ShowMains(object sender, EventArgs e)
@@ -81,7 +82,9 @@ namespace fastRitchies
                     tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
                 }
             }
-            // Shows 
+
+            //MAINS//////////////////////////////////////////////////////////
+
             // Dynamically add buttons for each menu item 
             List<Button> mains = new List<Button>();
             List<FoodItem> menu = Program.GetItems("mains");
@@ -91,12 +94,18 @@ namespace fastRitchies
                 mains.Add(new Button());
                 mains[i].Name = $"btn-mains-{i}";
                 mains[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                mains[i].Size = new Size(217, 50);
+                mains[i].Size = new Size(217, 100);
+
+                imagePath = $"Assets/{menu[i].foodItemName}.png";
+                mains[i].Image = Image.FromFile(imagePath);
+                //image
+                mains[i].TextImageRelation = TextImageRelation.TextBeforeImage;
+                mains[i].ImageAlign = ContentAlignment.MiddleRight;
+                mains[i].TextAlign = ContentAlignment.MiddleLeft;
+
                 mains[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[10].ToString())]); };
 
                 mains[i].Location = new Point(mainsLoc.X, mainsLoc.Y + (i * 2));
-                //PictureBox pictureBox = new PictureBox();
-                //pictureBox.Image = Image.FromFile("Assets/burger - solid.svg");
 
                 // Adds button to screen
                 tableLayoutPanel1.Controls.Add(mains[i], 0, i + 1);
