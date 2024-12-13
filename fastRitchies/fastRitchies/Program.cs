@@ -16,14 +16,6 @@ namespace fastRitchies
         [STAThread]
         static void Main()
         {
-            //class testing - liv
-            //Icon burgerIcon = new Icon("Assets/burger - solid.svg");
-            //FoodCategory burger = new FoodCategory("Burger", burgerIcon);
-            //FoodItem cheeseSupreme = new FoodItem("Cheeseburger Supreme", "burger", 15.6, "A cheesy, meaty meal.", burgerIcon);
-            //Console.WriteLine("Burger: ", burger);
-            //Console.WriteLine(cheeseSupreme);
-          
-
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

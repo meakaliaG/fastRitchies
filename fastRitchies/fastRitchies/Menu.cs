@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace fastRitchies
 {
@@ -82,7 +84,8 @@ namespace fastRitchies
                 mains[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[10].ToString())]); };
 
                 mains[i].Location = new Point(mainsLoc.X, mainsLoc.Y + (i * 2));
-                    // add icon
+                //PictureBox pictureBox = new PictureBox();
+                //pictureBox.Image = Image.FromFile("Assets/burger - solid.svg");
 
                     // Adds button to screen
                     tableLayoutPanel1.Controls.Add(mains[i], 0, i + 1);
