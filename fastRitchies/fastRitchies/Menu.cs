@@ -53,7 +53,7 @@ namespace fastRitchies
                 sides.Add(new Button());
                 sides[i].Name = $"btn-sides-{i}";
                 sides[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                sides[i].Size = new Size(217, 75);
+                sides[i].Size = new Size(217, 90);
 
             imagePath = $"Assets/{menu[i].foodItemName}.png";
                 sides[i].Image = Image.FromFile(imagePath);
