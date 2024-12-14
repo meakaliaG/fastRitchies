@@ -52,10 +52,10 @@ namespace fastRitchies
             {
                 sides.Add(new Button());
                 sides[i].Name = $"btn-sides-{i}";
-                sides[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                sides[i].Size = new Size(217, 100);
+                sides[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
+                sides[i].Size = new Size(217, 110);
 
-            imagePath = $"Assets/{menu[i].foodItemName}.png";
+                imagePath = $"Assets/{menu[i].foodItemName}.png";
                 sides[i].Image = Image.FromFile(imagePath);
                 //image
                 sides[i].TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -93,8 +93,8 @@ namespace fastRitchies
             {
                 mains.Add(new Button());
                 mains[i].Name = $"btn-mains-{i}";
-                mains[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                mains[i].Size = new Size(217, 100);
+                mains[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
+                mains[i].Size = new Size(217, 110);
 
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 mains[i].Image = Image.FromFile(imagePath);
@@ -143,8 +143,8 @@ namespace fastRitchies
             {
                 drinks.Add(new Button());
                 drinks[i].Name = $"btn-drinks-{i}";
-                drinks[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                drinks[i].Size = new Size(217, 100);
+                drinks[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
+                drinks[i].Size = new Size(217, 110);
 
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 drinks[i].Image = Image.FromFile(imagePath);
@@ -182,8 +182,9 @@ namespace fastRitchies
             {
                 desserts.Add(new Button());
                 desserts[i].Name = $"btn-desserts-{i}";
-                desserts[i].Text = menu[i].foodItemName + "\n\n" + menu[i].foodDescription;
-                desserts[i].Size = new Size(217, 100);
+                desserts[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
+                desserts[i].Size = new Size(217, 110);
+
 
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 desserts[i].Image = Image.FromFile(imagePath);
@@ -194,7 +195,6 @@ namespace fastRitchies
 
                 desserts[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[13].ToString())]); };
                 desserts[i].Location = new Point(dessertsLoc.X, dessertsLoc.Y + (i * 2));
-                // add icon
 
                 // Adds button to screen
                 tableLayoutPanel1.Controls.Add(desserts[i], 3, i + 1);

@@ -40,10 +40,10 @@ namespace fastRitchies
             List<FoodItem> items = new List<FoodItem>();
             switch (category.ToLower()) {
                 case "mains":
-                    items.Add(new FoodItem("RITchie's Burger", category, 5.00, "Our classic hamburger with lettuce, tomato, onions, and Tiger Sauce.", SystemIcons.Information));
+                    items.Add(new FoodItem("RITchie's Burger", category, 5.00, "Our classic hamburger with lettuce, tomato, and Tiger Sauce.", SystemIcons.Information));
                     items.Add(new FoodItem("Tech Crew Tenders", category, 6.00, "3 piece chicken tenders, comes with a sauce of your choice.", SystemIcons.Information));
-                    items.Add(new FoodItem("Springfest Sub", category, 8.00, "A toasted footlong turkey sub with provolone, cucumbers, lettuce, pickles and onions, topped with garlic aoili.", SystemIcons.Information));
-                    items.Add(new FoodItem("Co-op Chicken Nuggets", category, 15.00, "20 piece chicken nuggets, comes with 3 sauces of your choice.", SystemIcons.Information));
+                    items.Add(new FoodItem("Springfest Sub", category, 8.00, "A toasted footlong turkey sub with provolone and lettuce.", SystemIcons.Information));
+                    items.Add(new FoodItem("Co-op Chicken Nuggets", category, 15.00, "20 piece chicken nuggets, comes with 3 sauces.", SystemIcons.Information));
                     break;
                 case "sides":
                     items.Add(new FoodItem("Freshman Fries", category, 2.50, "Side of small curly fries.", SystemIcons.Information));
