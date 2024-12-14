@@ -28,9 +28,9 @@ namespace fastRitchies
         private void Menu_Load(object sender, EventArgs e)
         {
 
-
         }
 
+        //SIDE MENU OPTIONS
         private void ShowSides(object sender, EventArgs e)
         {
             // Hides existing menu
@@ -41,8 +41,6 @@ namespace fastRitchies
                     tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
                 }
             }
-
-            //SIDES//////////////////////////////////////////////////////////
 
             // Dynamically add buttons for each menu item 
             List<Button> sides = new List<Button>();
@@ -55,9 +53,9 @@ namespace fastRitchies
                 sides[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
                 sides[i].Size = new Size(217, 110);
 
+                //image for each menu item
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 sides[i].Image = Image.FromFile(imagePath);
-                //image
                 sides[i].TextImageRelation = TextImageRelation.TextBeforeImage;
                 sides[i].ImageAlign = ContentAlignment.MiddleRight;
                 sides[i].TextAlign = ContentAlignment.MiddleLeft;
@@ -72,6 +70,7 @@ namespace fastRitchies
 
         }
 
+        //MAIN MENU OPTIONS
         private void ShowMains(object sender, EventArgs e)
         {
             // Hides existing menu
@@ -82,8 +81,6 @@ namespace fastRitchies
                     tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
                 }
             }
-
-            //MAINS//////////////////////////////////////////////////////////
 
             // Dynamically add buttons for each menu item 
             List<Button> mains = new List<Button>();
@@ -96,9 +93,9 @@ namespace fastRitchies
                 mains[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
                 mains[i].Size = new Size(217, 110);
 
+                //image for each of the menu items
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 mains[i].Image = Image.FromFile(imagePath);
-                //image
                 mains[i].TextImageRelation = TextImageRelation.TextBeforeImage;
                 mains[i].ImageAlign = ContentAlignment.MiddleRight;
                 mains[i].TextAlign = ContentAlignment.MiddleLeft;
@@ -115,14 +112,9 @@ namespace fastRitchies
 
         private void pastOrdersButton_Click(object sender, EventArgs e)
         {
-            // TO-DO: add pop-up of past-orders
-            //        make clickable to re-order if time
-
-            //why is this not showing up on the menu screen now
-
-            // fixed >:)
         }
 
+        //DRINKS MENU OPTIONS
         private void ShowDrinks(object sender, EventArgs e)
         {
             // Hides existing menu
@@ -134,7 +126,6 @@ namespace fastRitchies
                 }
             }
 
-            //DRINKS//////////////////////////////////////////////////////
             // Dynamically add buttons for each menu item 
             List<Button> drinks = new List<Button>();
             List<FoodItem> menu = Program.GetItems("drinks");
@@ -146,22 +137,22 @@ namespace fastRitchies
                 drinks[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
                 drinks[i].Size = new Size(217, 110);
 
+                //image for each of the menu items
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 drinks[i].Image = Image.FromFile(imagePath);
-                //image
                 drinks[i].TextImageRelation = TextImageRelation.TextBeforeImage;
                 drinks[i].ImageAlign = ContentAlignment.MiddleRight;
                 drinks[i].TextAlign = ContentAlignment.MiddleLeft;
 
                 drinks[i].Click += (obj, eventArgs) => { AddToCart(obj, eventArgs, Program.GetItems((sender as Button).Text)[int.Parse((obj as Button).Name[11].ToString())]); };
                 drinks[i].Location = new Point(drinksLoc.X, drinksLoc.Y + (i * 2));
-                // add icon
 
                 // Adds button to screen
                 tableLayoutPanel1.Controls.Add(drinks[i], 2, i + 1);
             }
         }
 
+        //DESSERTS MENU OPTIONS
         private void ShowDesserts(object sender, EventArgs e)
         {
             // Hides existing menu
@@ -173,7 +164,6 @@ namespace fastRitchies
                 }
             }
 
-            // Shows 
             // Dynamically add buttons for each menu item 
             List<Button> desserts = new List<Button>();
             List<FoodItem> menu = Program.GetItems("desserts");
@@ -185,10 +175,9 @@ namespace fastRitchies
                 desserts[i].Text = menu[i].foodItemName + "\n" + "$" + menu[i].foodPrice + "\n\n" + menu[i].foodDescription;
                 desserts[i].Size = new Size(217, 110);
 
-
+                //image for each menu item
                 imagePath = $"Assets/{menu[i].foodItemName}.png";
                 desserts[i].Image = Image.FromFile(imagePath);
-                //image
                 desserts[i].TextImageRelation = TextImageRelation.TextBeforeImage;
                 desserts[i].ImageAlign = ContentAlignment.MiddleRight;
                 desserts[i].TextAlign = ContentAlignment.MiddleLeft;

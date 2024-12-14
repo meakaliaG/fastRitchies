@@ -29,7 +29,7 @@ namespace fastRitchies
 
 
             // next
-            Application.Run(new Menu(username));
+            //Application.Run(new Menu(username));
 
             // finally
             //Checkout checkout = new Checkout(username);
@@ -37,6 +37,7 @@ namespace fastRitchies
 
         public static List<FoodItem> GetItems(string category)
         {
+            //DATA STRUCTURE #1
             List<FoodItem> items = new List<FoodItem>();
             switch (category.ToLower()) {
                 case "mains":

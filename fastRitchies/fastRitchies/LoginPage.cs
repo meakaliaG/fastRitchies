@@ -14,7 +14,6 @@ namespace fastRitchies
     public partial class LoginPage : Form
 
     {
-
         private string user;
         public LoginPage()
         {
@@ -43,11 +42,12 @@ namespace fastRitchies
                 // Display orders in ListView
                 foreach (var order in orders)
                 {
+                    //pastOrdersWindow.View = View.Details;
                     var listViewItem = new ListViewItem(order.foodItemName);
                     //listViewItem.SubItems.Add(order.Category);
                     listViewItem.SubItems.Add(order.foodPrice.ToString("C"));
-                    listViewItem.SubItems.Add(order.foodDescription);
-
+                    //listViewItem.SubItems.Add(order.foodDescription);
+                    //pastOrdersWindows.View = View.Details;
                     pastOrdersWindow.Items.Add(listViewItem);
                 }
             }
@@ -145,6 +145,11 @@ namespace fastRitchies
         {
             Menu menu = new Menu(user);
             menu.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
