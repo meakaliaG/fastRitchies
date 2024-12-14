@@ -214,5 +214,10 @@ namespace fastRitchies
             Checkout checkout = new Checkout(username, cart);
             checkout.Show();
         }
+
+        private void cartCountLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -147,6 +147,7 @@
             this.cartCountLabel.Size = new System.Drawing.Size(31, 31);
             this.cartCountLabel.TabIndex = 3;
             this.cartCountLabel.Text = "0";
+            this.cartCountLabel.Click += new System.EventHandler(this.cartCountLabel_Click);
             // 
             // Menu
             // 
