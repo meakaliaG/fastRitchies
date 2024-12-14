@@ -34,15 +34,17 @@ namespace fastRitchies
 
                 string orderWindow = item.foodItemName + "," + item.categoryName + "," + item.foodPrice + "," + item.foodDescription + Environment.NewLine;
                 File.AppendAllText(filePath, orderWindow);
-                //File.WriteAllText(filePath, "hello");
             }
 
 
-                //.ToString() may be replaced with another method to orient orders
-                //into a comma separated list following the format:
-                //Name,Category,Price,Description
-                //Burger,FastFood,5.99,Delicious beef burger
-                //Pizza, FastFood,8.99,Cheesy pizza
+            //.ToString() may be replaced with another method to orient orders
+            //into a comma separated list following the format:
+            //Name,Category,Price,Description
+            //Burger,FastFood,5.99,Delicious beef burger
+            //Pizza, FastFood,8.99,Cheesy pizza
+
+            placeOrderLabel.Text = "Order placed!";
+            placeOrderLabel.ForeColor = System.Drawing.Color.Green;
 
         }
 

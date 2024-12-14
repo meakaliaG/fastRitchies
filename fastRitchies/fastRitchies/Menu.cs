@@ -119,6 +119,8 @@ namespace fastRitchies
             //        make clickable to re-order if time
 
             //why is this not showing up on the menu screen now
+
+            // fixed >:)
         }
 
         private void ShowDrinks(object sender, EventArgs e)
@@ -199,9 +201,12 @@ namespace fastRitchies
             }
         }
 
+        int cartCount = 0;
         private void AddToCart(object sender, EventArgs e, FoodItem foodItem)
         {
             cart.Add(foodItem);
+            cartCount++;
+            cartCountLabel.Text = "Items in cart: " + cartCount.ToString();
         }
 
         private void GoToCart(object sender, EventArgs e)
