@@ -29,7 +29,7 @@ namespace fastRitchies
 
 
             // next
-            //Application.Run(new Menu(username));
+            Application.Run(new Menu(username));
 
             // finally
             //Checkout checkout = new Checkout(username);
