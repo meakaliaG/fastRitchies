@@ -98,12 +98,12 @@ namespace fastRitchies
                 loginLabel.ForeColor = System.Drawing.Color.Red;
                 return;
             }
-
             if (File.Exists(filePath))
             {
                 user = username;
                 //load user past orders
                 LoadOrders(filePath);
+               
             }
             else
             {

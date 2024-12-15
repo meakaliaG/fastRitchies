@@ -30,14 +30,17 @@ namespace fastRitchies
 
             // next
             //Application.Run(new Menu(username));
+           
 
             // finally
             //Checkout checkout = new Checkout(username);
+           
         }
 
         public static List<FoodItem> GetItems(string category)
         {
             //DATA STRUCTURE #1
+            // Creates list of 4 food items in each of the 4 categories, Main(entrees), side, drinks and desserts
             List<FoodItem> items = new List<FoodItem>();
             switch (category.ToLower()) {
                 case "mains":
@@ -61,7 +64,7 @@ namespace fastRitchies
                 case "desserts":
                     items.Add(new FoodItem("CSH Cookies", category, 3.00, "1 double chocolate chip cookie.", SystemIcons.Information));
                     items.Add(new FoodItem("Brick City Brownies", category, 3.00, "1 chocolate chunk brownie.", SystemIcons.Information));
-                    items.Add(new FoodItem("Alumni Apple Pie", category, 2.00, "Small curly fries.", SystemIcons.Information));
+                    items.Add(new FoodItem("Alumni Apple Pie", category, 2.00, "A pie filled with apples.", SystemIcons.Information));
                     items.Add(new FoodItem("Tiger Tracks Ice Cream", category, 4.00, "RIT exclusive Perry's Ice Cream flavor: Tiger Tracks!", SystemIcons.Information));
                     break;
                 default:
