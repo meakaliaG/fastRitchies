@@ -64,8 +64,8 @@ namespace fastRitchies
             // 
             this.splitContainer1.Panel2.Controls.Add(this.menuButton);
             this.splitContainer1.Panel2.Controls.Add(this.pastOrdersWindow);
-            this.splitContainer1.Size = new System.Drawing.Size(600, 276);
-            this.splitContainer1.SplitterDistance = 197;
+            this.splitContainer1.Size = new System.Drawing.Size(746, 371);
+            this.splitContainer1.SplitterDistance = 244;
             this.splitContainer1.TabIndex = 0;
             // 
             // Subtitle
@@ -150,7 +150,7 @@ namespace fastRitchies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 276);
+            this.ClientSize = new System.Drawing.Size(746, 371);
             this.Controls.Add(this.splitContainer1);
             this.Name = "LoginPage";
             this.Text = "Login";

@@ -47,7 +47,7 @@ namespace fastRitchies
             placeOrderLabel.ForeColor = System.Drawing.Color.Green;
 
         }
-
+        //Caculating the price of the food
         private void Checkout_Load(object sender, EventArgs e)
         {
             double totalPrice = 0.00;

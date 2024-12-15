@@ -191,6 +191,7 @@ namespace fastRitchies
         }
 
         int cartCount = 0;
+        //add food items to your shopping cart
         private void AddToCart(object sender, EventArgs e, FoodItem foodItem)
         {
             cart.Add(foodItem);
@@ -198,6 +199,7 @@ namespace fastRitchies
             cartCountLabel.Text = "Items in cart: " + cartCount.ToString();
         }
 
+        //show items that you place in your cart
         private void GoToCart(object sender, EventArgs e)
         {
             Checkout checkout = new Checkout(username, cart);
